@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DG</title>
+
+        <style>
+            A {
+            color: white;
+            }
+            body {
+            background-color:black;
+            }
+            .container_header{
+                color:white;
+                display: grid;
+                grid-template-columns: 10% 90%;
+                grid-template-rows: 1fr;
+                position: relative;   
+            }
+            .text {
+            color:white;
+            }
+            .back {
+            color:white;
+            }
+            .container_body {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                position: relative;   
+                gap: 30px;
+                gap: 30px;
+            }
+            .vid {
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 */
+                height: 0;                
+            }
+            .vid_attr{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: 1px solid white;
+                filter: brightness(30%);
+                transition: border 2s, filter 2s, border-radius 1s;
+            }
+            .vid_attr:hover {
+                border: 0px;
+                border-radius: 0%;  
+                filter: brightness(100%);
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container_header">
+            <div clss="back">
+                <a href="main2.html">
+                back
+                </a>
+            </div>
+            <div class="text">
+                border-radius: 50%;
+                position : relative;
+                width: 100%;
+                height: 100%;
+                border: 1px solid black;
+                filter: brightness(30%);
+                transition: filter 2s, border-radius 1s;
+                border-radius: 50%;
+                position : relative;
+                width: 100%;
+                height: 100%;
+                border: 1px solid black;
+                filter: brightness(30%);
+                transition: filter 2s, border-radius 1s;
+            </div>
+        </div>
+        <div class="container_body">
+            <div class = "vid">
+                <iframe class = "vid_attr" src="https://player.vimeo.com/video/425648418?autoplay=1&loop=0&title=0&byline=0&portrait=0&muted=1&autopause=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+            <div class = "vid">
+                <iframe class = "vid_attr" src="https://player.vimeo.com/video/425648811?autoplay=1&loop=0&title=0&byline=0&portrait=0&muted=1&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+            <div class = "vid">
+                <iframe class = "vid_attr" src="https://player.vimeo.com/video/425648665?autoplay=1&loop=0&title=0&byline=0&portrait=0&muted=1&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+            <div class = "vid">
+                <iframe class = "vid_attr" src="https://player.vimeo.com/video/425648916?autoplay=1&loop=0&title=0&byline=0&portrait=0&muted=1&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+                
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DG</title>
+        <meta charset = "UTF-8">
+        <link rel="icon" href="./images/캡처.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="./images/캡처.png" type="image/x-icon" />
+        <style>
+            body {
+                background-color: black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+        var graphics = [
+        "./images/자산 1.png",
+        "./images/자산 2.png",
+        "./images/자산 3.png",
+        "./images/자산 4.png",
+        "./images/자산 5.png",
+        "./images/자산 6.png",
+        "./images/자산 7.png",
+        "./images/자산 8.png",
+        "./images/자산 9.png",
+        "./images/자산 10.png"
+        ];
+        
+        for (var i=0; i<5 ;i++) {
+            document.write("<img src=\""+graphics[Math.floor(Math.random()*graphics.length)] + "\" width="+(200+Math.random()*200) +"px"+" style=\""+"margin-left:"+(+Math.random()*500)+"px\">");
+        }
+        </script>
+    </body>
+</html>
