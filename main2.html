@@ -89,7 +89,27 @@
             }
 
         </style>
+        <script type='text/javascript'>
+            function shuffle(array) {
+                var currentIndex = array.length, temporaryValue, randomIndex;
 
+                // While there remain elements to shuffle...
+                while (0 !== currentIndex) {
+
+                    // Pick a remaining element...
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex -= 1;
+
+                    // And swap it with the current element.
+                    temporaryValue = array[currentIndex];
+                    array[currentIndex] = array[randomIndex];
+                    array[randomIndex] = temporaryValue;
+                }
+
+                return array;
+            }
+            
+        </script>
     </head>
     <body>
 
@@ -1630,7 +1650,7 @@
               "iron"
                     ];
                     
-                    for(var i = 0; i < 4; i++) {
+                    for(var i = 0; i < 2; i++) {
                     document.write("<span class=\"text1\">"+"<a href='random.html'>"+words[Math.floor(Math.random()*words.length)] +
                     "</a>"+"-"+"<br>"+"</span>");
                     document.write("<span class=\"text1\">"+"<a href='random.html'>"+words[Math.floor(Math.random()*words.length)] +
@@ -1647,7 +1667,127 @@
                 </script>
             </div>
             <div>
-                <img class = "pannel" src = "./images/panel.jpg">
+                <canvas class = "pannel" id = "Canvas" width = 2400 height = 3600 background >
+                    This browser doesn't supoort canvas
+                </canvas>
+                <script type="text/javascript">
+                    var width = 2400, height = 3600;
+
+                    // a1
+                    var img_list = [
+                        './images/a1.jpg',
+                        //'./images/a2.jpg',
+                        './images/a3.jpg',
+                        './images/a4.jpg',
+                        './images/a5.jpg',
+                        //'./images/a6.jpg',
+                        './images/a7.jpg',
+                        './images/a8.jpg',
+                        './images/a9.jpg'
+                    ];
+                    var index = Math.floor(Math.random()*img_list.length);
+                    
+                    // 이미지 불러온다.
+                    var img = new Image();
+                    img.src = img_list[index];
+                    var ctx = document.getElementById('Canvas').getContext('2d');
+                    ctx.fillStyle = "white";
+                    // var final_img = img;
+                    img.onload = function() {
+                        var soon_seo = [0, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+                        shuffle(soon_seo);
+
+                        var sx, sy, sw, sh;
+                        sw = Math.floor(width/4);
+                        sh = Math.floor(height/6);
+                        console.log([sw, sh]);
+                        for (var i = 0; i < 24; i ++) {
+                            if (i != 0){
+                                console.log(i);
+                                sx = (i%4)*sw;
+                                sy = Math.floor(i/4)*sh;
+                                
+                                random_x = (soon_seo[i]%4)*sw;
+                                random_y = Math.floor(soon_seo[i]/4)*sh;
+                                ctx.drawImage(img, sx, sy, sw, sh, random_x, random_y, sw, sh);
+                            } 
+                        }
+
+                        // b1
+                        var img_list = [
+                        './images/b1.svg',
+                        './images/c1.svg',
+                        './images/c2.svg',
+                        './images/b2.svg',
+                        //'./images/b3.svg',
+                        //'./images/b4_color.svg',
+                        //'./images/b6_color.svg',
+                        './images/b5.svg',
+                        //'./images/b7.svg',
+                        //'./images/b8.svg',
+                        './images/b9.svg',
+                        './images/b9_color.svg',
+                        './images/b9_line.svg',
+                        './images/c3.svg',
+                        ];
+                        var index = Math.floor(Math.random()*img_list.length);
+                        
+                        // 이미지 불러온다.
+                        var img2 = new Image();
+                        img2.src = img_list[index];
+                        // var final_img = img;
+                        img2.onload = function() {
+                            var soon_seo = [0, 1, 2, 3, 4, 5];
+                            shuffle(soon_seo);
+
+                            var sx, sy, sw, sh;
+                            sw = Math.floor(width/2);
+                            sh = Math.floor(height/3);
+                            console.log([sw, sh]);
+                            for (var i = 0; i < 6; i ++) {
+                                //if (i != 0){
+                                    console.log(i);
+                                    sx = (i%2)*sw;
+                                    sy = Math.floor(i/2)*sh;
+                                    
+                                    random_x = (soon_seo[i]%2)*sw;
+                                    random_y = Math.floor(soon_seo[i]/2)*sh;
+                                    ctx.drawImage(img2, sx, sy, sw, sh, random_x, random_y, sw, sh);
+                                //} 
+                            }
+
+                            // c1
+                            var img_list = [
+                            './images/c1.svg',
+                            './images/c1.svg',
+                            './images/c1.svg',
+                            './images/c1.svg',
+                            './images/c1.svg',
+                            './images/b6_color.svg',
+                            './images/c2.svg',
+                            //'./images/b7.svg',
+                            //'./images/b8.svg'
+                            //'./images/b3.svg',
+                            //'./images/b1.svg'
+                            './images/b9.svg',
+                            './images/b9_color.svg',
+                            './images/b9_line.svg',
+                            './images/c3.svg',
+                            ];
+                            var index = Math.floor(Math.random()*img_list.length);
+                            
+                            // 이미지 불러온다.
+                            var img3 = new Image();
+                            img3.src = img_list[index];
+                            // var final_img = img;
+                            img3.onload = function() {
+                                ctx.drawImage(img3,0,0);
+                            }
+                        }
+
+
+                    }
+                </script>
             </div>
             <div>
                 <a href="4VIDEOS.html">
@@ -1681,7 +1821,8 @@
                 6
             </div>
             <div>
-                <script text = "text/javascript">
+                7
+                <!-- <script text = "text/javascript">
                     var max_image = 7, n_image = 15;
                     for (var i = 0; i < n_image; i++) {
                         random_number = Math.floor(Math.random()*max_image)+1;
@@ -1702,7 +1843,7 @@
                             random_y +
                             '">');
                     }
-                </script>
+                </script> -->
             </div>
             <div>
                 8
