@@ -2,11 +2,10 @@
 <html>
     <head>
         <title>DG</title>
-
+        <meta charset="UTF-8">
+        <link rel="icon" href="./images/type a 자산 6.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="./images/type a 자산 6.png" type="image/x-icon" />
         <style>
-            A {
-            color: white;
-            }
             body {
             background-color:black;
             }
@@ -15,13 +14,15 @@
                 display: grid;
                 grid-template-columns: 10% 90%;
                 grid-template-rows: 1fr;
+                padding-bottom:40px;
                 position: relative;   
             }
-            .text {
-            color:white;
-            }
-            .back {
-            color:white;
+            .text1 {
+             text-align: left;
+             font-size: 1vw;
+             font-family: 'Helvetica Neue';
+             font-weight: 500;
+             color: white;
             }
             .container_body {
                 display: grid;
@@ -45,10 +46,10 @@
                 border-radius: 50%;
                 border: 1px solid white;
                 filter: brightness(30%);
-                transition: border 2s, filter 2s, border-radius 1s;
+                transition: filter 2s, border-radius 1s;
             }
             .vid_attr:hover {
-                border: 0px;
+                /* border: 1px; */
                 border-radius: 0%;  
                 filter: brightness(100%);
             }
@@ -57,26 +58,49 @@
     </head>
     <body>
         <div class="container_header">
-            <div clss="back">
-                <a href="main2.html">
+            <div>
+                <a href="main4.html" style="color: white">
+                <span class="text1">
                 back
+                </span>
                 </a>
             </div>
-            <div class="text">
+            <div class="text1">
+                <span
+                style="color:white;
+                text-decoration:line-through;
+                text-decoration-color:white;">
+            오징어 다리를 달고 태어난 강대걸은
+            동물 보호법 제 21조 제 3항에 의거하여
+            매화 마을 우물에 살고 있다.
+            우물 속 강대걸은 요셉에게 말을 걸었다.
+            “번개탄 냄새 한번 맡아보실래요?”
+            “이런 것까지 해주나요?”
+            향의 포근한 느낌이 스트레스처럼 다가왔다.
+            한박자 느리게 진폭이 느껴졌다.
+            “세로토닌 분비를 증가시키거든요”
+            후각과 시각사이 간격이 멀어졌다.
+                </span>
+                <span
+                style="color:white;
+                text-decoration:line-none;
+                text-decoration-color:white;">
+                 "꿈꾸는 요셉."
+                </span>
             </div>
         </div>
         <div class="container_body">
             <div class = "vid">
-                <iframe class = "vid_attr" src="https://player.vimeo.com/video/425648418?autoplay=1&loop=0&title=0&byline=0&portrait=0&muted=1&autopause=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe class = "vid_attr" src="https://player.vimeo.com/video/425648418?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1&autopause=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
             <div class = "vid">
-                <iframe class = "vid_attr" src="https://player.vimeo.com/video/425648811?autoplay=1&loop=0&title=0&byline=0&portrait=0&muted=1&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe class = "vid_attr" src="https://player.vimeo.com/video/425648811?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
             <div class = "vid">
-                <iframe class = "vid_attr" src="https://player.vimeo.com/video/425648665?autoplay=1&loop=0&title=0&byline=0&portrait=0&muted=1&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe class = "vid_attr" src="https://player.vimeo.com/video/425648665?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
             <div class = "vid">
-                <iframe class = "vid_attr" src="https://player.vimeo.com/video/425648916?autoplay=1&loop=0&title=0&byline=0&portrait=0&muted=1&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe class = "vid_attr" src="https://player.vimeo.com/video/425648916?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
                 
         </div>

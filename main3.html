@@ -15,31 +15,30 @@
                 filter: brightness(50%);
             }
 
-
+            A {
+                color : white;
+                text-decoration: none;
+            }
             body {
                 background-color: black;
             }
             .container_header {
-                background-color: black;
                 color : white;
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr;
                 gap: 40px;
-                padding-bottom: 40px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 40px;
                 padding-right: 40px;
-                /* border: 1px solid white; */
+                border: 1px solid white;
             }
-            .re {
+            
+            .title {
                 text-align:left;
                 color : white;
-                font-family: 'Helvetica Neue';
-            }
-
-            .title {
-                text-align:center;
-                color : white;
-                font-size: 40pt;
+                font-size: 20px;
                 font-family: 'Helvetica Neue';
                 font-weight: 800;
                  
@@ -49,17 +48,16 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr;
-                /* border: 1px solid white; */
-                gap: 40px;
+                border: 1px solid white;
+                gap: 40px 40px;
                 padding-left: 40px;
                 padding-right: 40px;
-                padding-top: 40px;
+                padding-top: 20px;
                 padding-bottom: 20px;
             }
             .words_style{
-                text-decoration: none;
-                text-align: right;
-                font-size: 3vw;
+                text-align: left;
+                font-size: 45px;
                 font-family: 'Helvetica Neue';
                 font-weight: 700;
                 color: white;
@@ -71,29 +69,18 @@
                 position:relative;
             }
             .small_images {
-                filter: brightness(20%);
+                filter: brightness(100%);
                 transition: filter 0.5s;
             }
             .small_images:hover {
-                filter: brightness(10%);
-            }
-            .story {
-                text-align: center;
-                color : white;
-                font-size: 1vw;
-                font-family: 'Noto Sans KR', sans-serif;
-                font-weight: 700;
-                line-height: 1.6vw;
-
-
+                filter: brightness(50%);
             }
             .container_body2 {
-                background-color: black;
                 color : white;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr;
-                /* border: 1px solid white; */
+                border: 1px solid white;
                 gap: 40px 40px;
                 padding-left: 40px;
                 padding-right: 40px;
@@ -128,9 +115,10 @@
 
 
         <div class="container_header">
-            <div class="re"> <a href="main2.html" style="color: white;"> re </a> </div>
-            <div></div>
-            <div class="title"> <mark style="background-color: black; color:white;">Dae-Gul Kang</mark></div>
+            <div class="title"> Dae-Gul Kang</div>
+            <div>
+                2
+            </div>
         </div>
         <div class="container_body1">
             <div class="words_style">
@@ -1662,12 +1650,10 @@
               "iron"
                     ];
                     
-                    var random_i1 = Math.floor(Math.random()*words.length);
-                    var random_i2 = Math.floor(Math.random()*words.length);
                     for(var i = 0; i < 1; i++) {
-                    document.write("<span class=\"text1\">"+"<a href='random.html'style='color: white;text-decoration:none;''>"+words[random_i1] +
+                    document.write("<span class=\"text1\">"+"<a href='random.html'>"+words[Math.floor(Math.random()*words.length)] +
                     "</a>"+"-"+"<br>"+"</span>");
-                    document.write("<span class=\"text1\">"+"<a href='random.html'style='color: white;text-decoration:none;''>"+words[random_i2] +
+                    document.write("<span class=\"text1\">"+"<a href='random.html'>"+words[Math.floor(Math.random()*words.length)] +
                     "</a>"+"</span>");
                     document.write("<br>"+"<br>");
                     }
@@ -1679,62 +1665,37 @@
                   //   "<br><br>"+"</div>");
                   //   }
                 </script>
-                                <a href="4VIDEOS.html">
-                                <script text = "text/javascript">
-                                    var max_image = 6, n_image = 5;
-                                    for (var i = 0; i < n_image; i++) {
-                                        random_number = Math.floor(Math.random()*max_image)+3;
-                                        img_src = "./images/type a 자산 " + random_number + ".svg";
-                                        random_width = Math.floor(Math.random()*250)+20;
-                                        random_height = Math.floor(Math.random()*250)+20;
-                                        random_x = Math.floor(Math.random()*100);
-                                        random_y = Math.floor(Math.random()*300);
-                                        document.write('<img class = "small_images" src = "' +
-                                            img_src +
-                                            '" style="position: relative; width: ' +
-                                            random_width  +
-                                            'px; height: ' +
-                                            random_height +
-                                            'px; margin-left: ' +
-                                            random_x +
-                                            'px;margin-top: ' +
-                                            random_y +
-                                            '">');
-                                    }
-                                </script>
-                                </a>
-
             </div>
             <div>
-                <canvas class = "pannel" id = "Canvas" width = 2400 height = 3600 background >
+                <canvas class = "pannel" id = "Canvas" width = 600 height = 900 background >
                     This browser doesn't supoort canvas
                 </canvas>
                 <script type="text/javascript">
-                    var width = 2400, height = 3600;
+                    var width = 600, height = 900;
 
                     // a1
                     var img_list = [
-                        'https://i.imgur.com/h68jzUb.jpg', //a1.jpg
-                        //'https://i.imgur.com/eTUTQKe.jpg',
-                        'https://i.imgur.com/Em3NqbQ.jpg',
-                        'https://i.imgur.com/AKI8qbk.jpg',
-                        'https://i.imgur.com/H0pAVGM.jpg',
-                        //'https://i.imgur.com/7keOPsG.jpg',
-                        'https://i.imgur.com/0rFVkMM.jpg',
-                        'https://i.imgur.com/Z4DDwCJ.jpg',
-                        'https://i.imgur.com/RdSfxID.jpg'
+                        // './images/a1.jpg',
+                        // //'./images/a2.jpg',
+                        // './images/a3.jpg',
+                        // './images/a4.jpg',
+                        // './images/a5.jpg',
+                        // //'./images/a6.jpg',
+                        // './images/a7.jpg',
+                        // './images/a8.jpg',
+                        // './images/a9.jpg'
+                        //'./images/a10.jpg',
+                        'https://picsum.photos/600/900?grayscale'
                     ];
                     var index = Math.floor(Math.random()*img_list.length);
                     
                     // 이미지 불러온다.
-                    var img1 = new Image();
-                    img1.src = img_list[index];
+                    var img = new Image();
+                    img.src = img_list[index];
                     var ctx = document.getElementById('Canvas').getContext('2d');
                     ctx.fillStyle = "white";
-                    
-
                     // var final_img = img;
-                    img1.onload = function() {
+                    img.onload = function() {
                         var soon_seo = [0, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
                         shuffle(soon_seo);
 
@@ -1750,33 +1711,26 @@
                                 
                                 random_x = (soon_seo[i]%4)*sw;
                                 random_y = Math.floor(soon_seo[i]/4)*sh;
-                                ctx.drawImage(img1, sx, sy, sw, sh, random_x, random_y, sw, sh);
+                                ctx.drawImage(img, sx, sy, sw, sh, random_x, random_y, sw, sh);
                             } 
                         }
 
                         // b1
                         var img_list = [
-                        './images/b1.svg',
-                        './images/c1.svg',
-                        './images/c2.svg',
+                        //'./images/b1.svg',
+                        //'./images/c1.svg',
+                        //'./images/c2.svg',
                         //'./images/b2.svg',
                         //'./images/b3.svg',
                         //'./images/b4_color.svg',
                         //'./images/b6_color.svg',
-                        './images/b5.svg',
+                        //'./images/b5.svg',
                         //'./images/b7.svg',
                         //'./images/b8.svg',
-                        './images/b9.svg',
+                        //'./images/b9.svg',
                         //'./images/b9_color.svg',
                         //'./images/b9_line.svg',
-                        './images/c3.svg',
-                        './images/b_a.svg',
-                        './images/b_d.svg',
-                        './images/b_e.svg',
-                        './images/b_k.svg',
-                        './images/b_l.svg',
-                        './images/b_n.svg',
-                        './images/b_u.svg',
+                        //'./images/c3.svg',
                         ];
                         var index = Math.floor(Math.random()*img_list.length);
                         
@@ -1806,11 +1760,13 @@
 
                             // c1
                             var img_list = [
-                            './images/c1.svg',
-                            './images/c1.svg',
-                            './images/c1.svg',
+                            //'./images/c1.svg',
+                            //'./images/c1.svg',
+                            //'./images/c1.svg',
+                            //'./images/c1.svg',
+                            //'./images/c1.svg',
                             //'./images/b6_color.svg',
-                            './images/c2.svg',
+                            //'./images/c2.svg',
                             //'./images/b7.svg',
                             //'./images/b8.svg'
                             //'./images/b3.svg',
@@ -1818,9 +1774,7 @@
                             //'./images/b9.svg',
                             //'./images/b9_color.svg',
                             //'./images/b9_line.svg',
-                            './images/c3.svg',
-                            './images/c3.svg',
-                            './images/c3.svg',
+                            //'./images/c3.svg',
                             ];
                             var index = Math.floor(Math.random()*img_list.length);
                             
@@ -1830,129 +1784,46 @@
                             // var final_img = img;
                             img3.onload = function() {
                                 ctx.drawImage(img3,0,0);
-                                ctx.font = "700 500px Helvetica Neue";
-                                
-                                
-                                var text_x = Math.floor(Math.random()*(2400-2000));
-                                var text_y = Math.floor(Math.random()*(3600-1000));
-                                
-                                // ctx.fillText(words[random_i1]+"-", text_x, text_y);
-                                // ctx.fillText(words[random_i2], text_x, text_y+500);
-                                
-                                // d
-                                var img_list = [
-                                './images/color_blue80.svg',
-                                './images/color_green80.svg',
-                                './images/color_pink80.svg',
-                                './images/color_red80.svg',
-                                //'./images/color_sky80.svg',
-                                './images/color_yellow80.svg',
-                                
-                                ];
-                                var index = Math.floor(Math.random()*img_list.length);
-                                var img4 = new Image();
-                                img4.src = img_list[index];
-                                img4.onload = function() {
-                                    var mozaic_width = 8, mozaic_height = 12;
-                                    var soon_seo = [...Array(mozaic_height*mozaic_width).keys()];
-                                    shuffle(soon_seo);
-
-                                    var sx, sy, sw, sh;
-                                    sw = Math.floor(width/mozaic_width);
-                                    sh = Math.floor(height/mozaic_height);
-                                    console.log([sw, sh]);
-                                    for (var i = 0; i < mozaic_width*mozaic_width; i ++) {
-                                        if (i != 0){
-                                            console.log(i);
-                                            sx = (i%mozaic_width)*sw;
-                                            sy = Math.floor(i/mozaic_width)*sh;
-                                            
-                                            random_x = (soon_seo[i]%mozaic_width)*sw;
-                                            random_y = Math.floor(soon_seo[i]/mozaic_width)*sh;
-                                            ctx.drawImage(img4, sx, sy, sw, sh, random_x, random_y, sw, sh);
-                                        } 
-                                    }
-                                    
-                                    //e
-                                    var img_list = [
-                                    //'./images/dgk1.svg',
-                                    //'./images/dgk2.svg',
-                                    ];
-                                    var index = Math.floor(Math.random()*img_list.length);
-                        
-                                    // 이미지 불러온다.
-                                    var img5 = new Image();
-                                    img5.src = img_list[index];
-                                    img5.onload = function() {
-                                        var soon_seo = [0, 1, 2, 3, 4, 5];
-                                        shuffle(soon_seo);
-
-                                        var sx, sy, sw, sh;
-                                        sw = Math.floor(width/2);
-                                        sh = Math.floor(height/3);
-                                        console.log([sw, sh]);
-                                        for (var i = 0; i < 6; i ++) {
-                                            //if (i != 0){
-                                                console.log(i);
-                                                sx = (i%2)*sw;
-                                                sy = Math.floor(i/2)*sh;
-                                                
-                                                random_x = (soon_seo[i]%2)*sw;
-                                                random_y = Math.floor(soon_seo[i]/2)*sh;
-                                                ctx.drawImage(img5, sx, sy, sw, sh, random_x, random_y, sw, sh);
-                                            //} 
-                                        }
-
-                                        // f
-                                        var img_list = [
-                                        ];
-                                        var index = Math.floor(Math.random()*img_list.length);
-                                        
-                                        // 이미지 불러온다.
-                                        var img6 = new Image();
-                                        img6.src = img_list[index];
-                                        // var final_img = img;
-                                        img6.onload = function() {
-                                            ctx.drawImage(img6,0,0);
-                                        }
-                                    }
-                                }
-                                // var text_x = Math.floor(Math.random()*(2400-1700));
-                                // var text_y = Math.floor(Math.random()*(3600-1000));
-                                // ctx.fillText(words[random_i2], text_x, text_y);
                             }
                         }
 
 
                     }
-
                 </script>
             </div>
-            <span class="story">
-                <a href="second.html" style="color: white;text-decoration:none;">
-                    <mark style="background-color: black; color:black;
-                    text-decoration:line-through;
-                    text-decoration-color:white;">
-                오징어 다리를 달고 태어난 강대걸은 <br>
-                동물 보호법 제 21조 3항에 의거하여 <br>
-                매화 마을 우물 안에서 살고 있다. <br>
-                우물 속 강대걸은 요셉에게 말을 걸었다. <br>
-                “번개탄 냄새 한번 맡아보실래요?” <br>
-                포근한 느낌이 스트레스처럼 다가왔다. <br>
-                한박자 느리게 진폭이 느껴졌다. <br>
-                “세로토닌 분비를 증가시키거든요” <br>
-                후각과 시각사이 간격이 멀어졌다. <br>
-꿈꾸는 요셉.</mark>
-            </a>
-        </span>
-    
+            <div>
+                <a href="4VIDEOS.html">
+                <script text = "text/javascript">
+                    var max_image = 12, n_image = 8;
+                    for (var i = 0; i < n_image; i++) {
+                        random_number = Math.floor(Math.random()*max_image)+3;
+                        img_src = "./images/type a 자산 " + random_number + ".svg";
+                        random_width = Math.floor(Math.random()*250)+20;
+                        random_height = Math.floor(Math.random()*250)+20;
+                        random_x = Math.floor(Math.random()*100);
+                        random_y = Math.floor(Math.random()*300);
+                        document.write('<img class = "small_images" src = "' +
+                            img_src +
+                            '" style="position: relative; width: ' +
+                            random_width  +
+                            'px; height: ' +
+                            random_height +
+                            'px; margin-left: ' +
+                            random_x +
+                            'px;margin-top: ' +
+                            random_y +
+                            '">');
+                    }
+                </script>
+                </a>
+            </div>
         </div>
         <div class="container_body2">
             <div>
-                <!-- 6 -->
+                6
             </div>
             <div>
-                <!-- 7 -->
+                7
                 <!-- <script text = "text/javascript">
                     var max_image = 7, n_image = 15;
                     for (var i = 0; i < n_image; i++) {
@@ -1977,7 +1848,7 @@
                 </script> -->
             </div>
             <div>
-                <!-- 8 -->
+                8
             </div>
         </div>
     </body>

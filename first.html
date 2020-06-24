@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DG</title>
+        <meta charset = "UTF-8">
+        <link rel="icon" href="./images/캡처.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="./images/캡처.png" type="image/x-icon" />
+        <style>
+            A {text-decoration: none;}
+            body {
+                background-color: black;
+            }
+            .title {
+                text-align:center;
+                color : white;
+                font-size: 30px;
+                font-family: 'Helvetica Neue';
+                font-weight: 800;
+            }
+            .Subtitle {
+                text-align: center;
+                font-size: 20px;
+                font-family: 'Helvetica Neue';
+                font-weight: 500;
+                color: blue;
+                padding-top:0px;
+            }
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top:0px;
+            }
+        
+            .responsive {
+                width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+c
+        <div class="title"> Dae-Gul Kang</div>
+        </a>
+        <br>
+        <a href="random.html">
+        <div class="Subtitle">random<br>game</div>
+        </a>
+        <br>
+        <script>
+            var videos = [
+            "https://player.twitch.tv/?channel=jials31&parent=www.example.com&controls=false",
+            "https://player.twitch.tv/?channel=jials31&parent=www.example.com&controls=false",
+            "https://player.twitch.tv/?channel=jials31&parent=www.example.com&controls=false"  
+            ]
+            var width = Math.floor(Math.random()*1920);
+            var height = width*1080/1920;
+            var mleft = Math.floor(Math.random()*800);
+            for (var i=0; i<3 ;i++) {
+            document.write("<iframe style =\"border-radius: 0%; margin-left:" + mleft +"px\" src =\"" + videos[Math.floor(Math.random()*videos.length)]+"\" frameborder=\"0\" allowfullscreen=\"true\" scrolling=\"no\" width=\"" + width + "\" height=\"" + height + "\"></iframe>");
+            }
+            document.write("<iframe style =\"border-radius: 50%; margin-left:" + mleft +"px\" src=\"https://clips.twitch.tv/embed?clip=AbrasivePeppyShallotPoooound&parent=www.example.com&controls=false\" frameborder=\"0\" allowfullscreen=\"true\" scrolling=\"no\" width=\"" + width + "\" height=\"" + height + "\"></iframe>");
+
+
+            document.wirte("<iframe src=\"https://player.vimeo.com/video/391910005?autoplay=1&loop=1&title=0&byline=0&portrait=0\" width=\"" + width + "\" height=\"" + height + "\" frameborder=\"0\" aloow=\"autoplay; fullscreen\" allowfullscreen </iframe>");
+
+
+        </script>
+        
+
+        <a href="main.html">
+        <img src="./images/캡처.png" alt="green and blue"
+        style="border-radius: 50%;" class="center responsive">
+    </a>
+    </body>
+</html>

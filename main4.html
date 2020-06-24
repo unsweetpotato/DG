@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DG</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./images/type a 자산 6.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./images/type a 자산 6.png" type="image/x-icon" />
+    <style>
+        .disable-scrollbars::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+            /* Chrome/Safari/Webkit */
+        }
+
+        .disable-scrollbars {
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE 10+ */
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .brightness {
+            filter: brightness(100%);
+            transition: filter 0.5s;
+        }
+
+        .brightness:hover {
+            filter: brightness(50%);
+        }
+
+
+        body {
+            background-color: black;
+        }
+
+        .container_father {
+            background-color: black;
+            color: white;
+            height: 100vh;
+            width: auto;
+            display: grid;
+        }
+
+        .container_header {
+            background-color: black;
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding-left: 40px;
+            padding-right: 40px;
+            border-bottom: 1px solid lightgrey;
+            /* border: 1px solid white; */
+        }
+
+
+        .re {
+            text-align: left;
+            color: white;
+            font-family: 'Helvetica Neue';
+        }
+
+        .title {
+            text-align: left;
+            color: white;
+            font-size: 1.5vw;
+            font-family: 'Helvetica Neue';
+            font-weight: 800;
+            padding: 0.3vw 0;
+
+        }
+
+        .container_body1 {
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            /* border: 1px solid white; */
+            padding: 40px;
+            overflow: hidden;
+        }
+
+        /* .container_poster {
+            border-right: 1px solid lightgrey;
+        } */
+
+        .container_contents {
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* border: 1px solid white; */
+            overflow-y: auto;
+
+        }
+
+        .container_row1 {
+            color: white;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1.5fr;
+            /* border: 1px solid white; */
+            gap: 50px;
+            padding-left: 40px;
+        }
+
+        .container_row2 {
+            color: white;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1.5fr;
+            /* border: 1px solid white; */
+            gap: 50px;
+        }
+
+
+
+        .middle_pannel {
+            width: 50%;
+            height: auto;
+            position: relative;
+        }
+
+        .pannel {
+            width: 85%;
+            height: auto;
+            position: relative;
+        }
+
+        .small_images {
+            filter: brightness(20%);
+            transition: filter 0.5s;
+        }
+
+        .small_images:hover {
+            filter: brightness(10%);
+        }
+
+        .story {
+            text-align: left;
+            color: white;
+            font-size: 1vw;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            line-height: 1.8vw;
+            color: white;
+        }
+
+        .words_style {
+            text-decoration: none;
+            text-align: left;
+            font-size: 2.5vw;
+            font-family: 'Helvetica Neue';
+            font-weight: 700;
+            line-height: 5vw;
+            color: white;
+        }
+    </style>
+    <script type='text/javascript'>
+        function shuffle(array) {
+            var currentIndex = array.length,
+                temporaryValue, randomIndex;
+
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container_father">
+        <div class="container_header">
+            <div> <a href="main4.html"><img src="./images/type a 자산 6.png" style="width:10%;height:auto;"></a></div>
+            <div style="padding-left:40px; padding-top: 0.5vw ;padding-bottom:0.5vw">
+                <a href="main4.html" style="color: white;font-size:1vw;">
+                    <span class="text1">
+                    re
+                    </span>
+                    </a>
+            </div>
+            <div class="title" style>Dae-Gul Kang</div>
+        </div>
+        <div class="container_body1">
+            <div class="container_poster">
+                <canvas class="pannel" id="Canvas" width=2400 height=3600>
+                    This browser doesn't supoort canvas
+                </canvas>
+
+            </div>
+            <div class="container_contents disable-scrollbars">
+                <div class="container_row1 story">
+                    <div style="padding-bottom:150px">
+                        <br><br>(1)<br><br>
+
+                        <canvas class="middle_pannel" id="Canvas2" width=600 height=900 >
+                            This browser doesn't supoort canvas
+                        </canvas>
+
+                    </div>
+
+                    <div>
+                        (2)<br><br>
+
+
+                        <canvas class="middle_pannel" id="Canvas3" width=600 height=900 >
+                            This browser doesn't supoort canvas
+                        </canvas>
+
+                    </div>
+                    <div>
+                        (3)<br><br>
+
+
+                        <canvas class="middle_pannel" id="Canvas4" width=600 height=900 >
+                            This browser doesn't supoort canvas
+                        </canvas>
+                    </div>
+                    <div>
+                        (4)<br><br>
+                        <canvas class="middle_pannel" id="Canvas5" width=600 height=900 >
+                            This browser doesn't supoort canvas
+                        </canvas>
+                    </div>
+                </div>
+
+
+                <div class="container_row2">
+                    <div class="story">
+                        <span style="font-style:italic;text-decoration:underline;
+                        text-decoration-color:white;">from</span><br><br>
+                        (1) <br><br>
+                        <a href="4VIDEOS.html">
+                            <script text="text/javascript">
+                                var max_image = 3,
+                                    n_image = 4;
+                                for (var i = 0; i < n_image; i++) {
+                                    random_number = Math.floor(Math.random() * max_image) + 6;
+                                    img_src = "./images/type a 자산 " + random_number + ".svg";
+                                    random_width = Math.floor(Math.random() * 200) + 50;
+                                    random_height = Math.floor(Math.random() * 200) + 50;
+                                    random_x = Math.floor(Math.random() * 100);
+                                    random_y = Math.floor(Math.random() * 200);
+                                    document.write('<img class = "small_images" src = "' +
+                                        img_src +
+                                        '" style="position: relative; width: ' +
+                                        random_width +
+                                        'px; height: ' +
+                                        random_height +
+                                        'px; margin-left: ' +
+                                        random_x +
+                                        'px;margin-top: ' +
+                                        random_y +
+                                        '">');
+                                }
+                            </script>
+                        </a>
+                    </div>
+                    <div class="story">
+                        (2)<br><br>
+                        <a href="random.html" style="color: white;text-decoration:none;">
+                            <span class="words_style brightness">
+                                fish-hurt <br>
+                                request-salt <br>
+                                blind-daughter <br>
+                                safe-fall <br>
+                                principle-father <br>
+                                after-storm <br>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="story">
+                        (4)<br><br>
+                        OX<br>
+                        XO<br>
+                        OX<br>
+                        XO<br>
+                        OX<br>
+                        XO<br>
+                    </div>
+                    <div class="story">
+                        (3)<br><br>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44946.68691612033!2d126.55056175159345!3d37.246905091329246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ba0e7fe542a59%3A0x258462138c79715b!2z64yA67aA64-E!5e0!3m2!1sko!2skr!4v1592922687978!5m2!1sko!2skr"
+                            position="relative" width="100%" height="25%" frameborder="0" style="border:0;"
+                            allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
+                        <img src="./images/face2.png" style="width:100%;height:auto;">
+                    </div>
+                </div>
+
+            </div>
+            <script type="text/javascript">
+                var width = 2400,
+                    height = 3600;
+
+                // a1
+                var img_list = [
+                    'https://i.imgur.com/h68jzUb.jpg', //a1.jpg
+                    //'https://i.imgur.com/eTUTQKe.jpg',
+                    'https://i.imgur.com/Em3NqbQ.jpg',
+                    'https://i.imgur.com/AKI8qbk.jpg',
+                    'https://i.imgur.com/H0pAVGM.jpg',
+                    //'https://i.imgur.com/7keOPsG.jpg',
+                    'https://i.imgur.com/0rFVkMM.jpg',
+                    'https://i.imgur.com/Z4DDwCJ.jpg',
+                    'https://i.imgur.com/RdSfxID.jpg'
+                ];
+                var index = Math.floor(Math.random() * img_list.length);
+
+                // 이미지 불러온다.
+                var img1 = new Image();
+                img1.src = img_list[index];
+                var ctx = document.getElementById('Canvas').getContext('2d');
+                var ctx2 = document.getElementById('Canvas2').getContext('2d');
+                var ctx3 = document.getElementById('Canvas3').getContext('2d');
+                var ctx4 = document.getElementById('Canvas4').getContext('2d');
+                var ctx5 = document.getElementById('Canvas5').getContext('2d');
+                var canvas4 = document.getElementById("canvas4");
+                ctx.fillStyle = "white";
+
+                ctx4.fillStyle = "white";
+                ctx4.fillRect(0, 0, 600, 900);
+                ctx3.fillStyle = "white";
+                ctx3.fillRect(0, 0, 600, 900);
+                // var final_img = img;
+                img1.onload = function () {
+                    var soon_seo = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+                        22, 23
+                    ];
+                    
+                    shuffle(soon_seo);
+
+                    var sx, sy, sw, sh;
+                    sw = Math.floor(width / 4);
+                    sh = Math.floor(height / 6);
+                    console.log([sw, sh]);
+                    for (var i = 1; i < 24; i++) {
+                        sx = (i % 4) * sw;
+                        sy = Math.floor(i / 4) * sh;
+
+                        random_x = (soon_seo[i] % 4) * sw;
+                        random_y = Math.floor(soon_seo[i] / 4) * sh;
+                        ctx.drawImage(img1, sx, sy, sw, sh, random_x, random_y, sw, sh);
+                        ctx5.drawImage(img1, sx, sy, sw, sh, random_x/4, random_y/4, sw/4, sh/4);
+                    }
+
+                    // b1
+                    var img_list = [
+                        //'./images/b1.svg',
+                        //'./images/c1.svg',
+                        // './images/c2.svg',
+                        // './images/b5.svg',
+                        // './images/b9.svg',
+                        // './images/c3.svg',
+                        './images/b_a.svg',
+                        './images/b_d.svg',
+                        './images/b_e.svg',
+                        './images/b_k.svg',
+                        './images/b_l.svg',
+                        './images/b_n.svg',
+                        './images/b_u.svg',
+                    ];
+                    var index = Math.floor(Math.random() * img_list.length);
+
+                    // 이미지 불러온다.
+                    var img2 = new Image();
+                    img2.src = img_list[index];
+                    // var final_img = img;
+                    img2.onload = function () {
+                        var soon_seo = [0, 1, 2, 3, 4, 5];
+                        shuffle(soon_seo);
+
+                        var sx, sy, sw, sh;
+                        sw = Math.floor(width / 2);
+                        sh = Math.floor(height / 3);
+                        console.log([sw, sh]);
+                        for (var i = 0; i < 6; i++) {
+                            //if (i != 0){
+                            console.log(i);
+                            sx = (i % 2) * sw;
+                            sy = Math.floor(i / 2) * sh;
+
+                            random_x = (soon_seo[i] % 2) * sw;
+                            random_y = Math.floor(soon_seo[i] / 2) * sh;
+                            ctx.drawImage(img2, sx, sy, sw, sh, random_x, random_y, sw, sh);
+                            ctx3.drawImage(img2, sx/4, sy/4, sw/4, sh/4, random_x/4, random_y/4, sw/4, sh/4);
+                            //} 
+                        }
+
+                        // c1
+                        var img_list = [
+                            './images/c1.svg',
+                            //'./images/c1.svg',
+                            './images/c1.svg',
+                            //'./images/b6_color.svg',
+                            './images/c2.svg',
+                            //'./images/b7.svg',
+                            //'./images/b8.svg'
+                            //'./images/b3.svg',
+                            //'./images/b1.svg'
+                            //'./images/b9.svg',
+                            //'./images/b9_color.svg',
+                            //'./images/b9_line.svg',
+                            './images/c3.svg',
+                            './images/c3.svg',
+                            //'./images/c3.svg',
+                        ];
+                        var index = Math.floor(Math.random() * img_list.length);
+
+                        // 이미지 불러온다.
+                        var img3 = new Image();
+                        img3.src = img_list[index];
+                        // var final_img = img;
+                        img3.onload = function () {
+                            var soon_seo = [0, 1, 2, 3, 4, 5];
+                            shuffle(soon_seo);
+
+                            var sx, sy, sw, sh;
+                            sw = Math.floor(width / 2);
+                            sh = Math.floor(height / 3);
+                            console.log([sw, sh]);
+                            for (var i = 0; i < 6; i++) {
+                                //if (i != 0){
+                                console.log(i);
+                                sx = (i % 2) * sw;
+                                sy = Math.floor(i / 2) * sh;
+
+                                random_x = (soon_seo[i] % 2) * sw;
+                                random_y = Math.floor(soon_seo[i] / 2) * sh;
+                                ctx.drawImage(img3, sx, sy, sw, sh, random_x, random_y, sw, sh);
+                                ctx4.drawImage(img3, sx/4, sy/4, sw/4, sh/4, random_x/4, random_y/4, sw/4, sh/4);
+                                //} 
+                            }
+
+                            ctx.font = "700 500px Helvetica Neue";
+
+
+                            var text_x = Math.floor(Math.random() * (2400 - 2000));
+                            var text_y = Math.floor(Math.random() * (3600 - 1000));
+
+                            // ctx.fillText(words[random_i1]+"-", text_x, text_y);
+                            // ctx.fillText(words[random_i2], text_x, text_y+500);
+
+                            // d
+                            var img_list = [
+                                './images/circle+blue.svg',
+                                './images/circle+green.svg',
+                                './images/circle+pink.svg',
+                                './images/circle+red.svg',
+                                //'./images/color_sky80.svg',
+                                './images/circle+yellow.svg',
+
+                            ];
+                            var index = Math.floor(Math.random() * img_list.length);
+                            var img4 = new Image();
+                            img4.src = img_list[index];
+                            img4.onload = function () {
+                                var mozaic_width = 8,
+                                    mozaic_height = 12;
+                                var soon_seo = [...Array(mozaic_height * mozaic_width).keys()];
+                                shuffle(soon_seo);
+
+                                var sx, sy, sw, sh;
+                                sw = Math.floor(width / mozaic_width);
+                                sh = Math.floor(height / mozaic_height);
+                                console.log([sw, sh]);
+                                for (var i = 0; i < mozaic_width * mozaic_width; i++) {
+                                    if (i != 0) {
+                                        console.log(i);
+                                        sx = (i % mozaic_width) * sw;
+                                        sy = Math.floor(i / mozaic_width) * sh;
+
+                                        random_x = (soon_seo[i] % mozaic_width) * sw;
+                                        random_y = Math.floor(soon_seo[i] / mozaic_width) * sh;
+                                        ctx.drawImage(img4, sx, sy, sw, sh, random_x, random_y, sw, sh);
+                                        ctx2.drawImage(img4, sx / 4, sy / 4, sw / 4, sh / 4, random_x /
+                                            4, random_y / 4, sw / 4, sh / 4);
+                                    }
+                                }
+
+                                
+                                
+                            }
+                            // var text_x = Math.floor(Math.random()*(2400-1700));
+                            // var text_y = Math.floor(Math.random()*(3600-1000));
+                            // ctx.fillText(words[random_i2], text_x, text_y);
+                        }
+                    }
+
+
+                }
+            </script>
+</body>
+
+</html>
